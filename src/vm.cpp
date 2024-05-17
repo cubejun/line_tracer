@@ -86,11 +86,11 @@ Sub::Sub() : Node("camsub_wsl")
 {
     centerq.push(320);
     centeryq.push(45);
-	writer1.open("output1.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 360));
-	writer2.open("output2.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 90));
+    writer1.open("output1.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 360));
+    writer2.open("output2.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 90));
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     sub_ = this->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed", qos_profile, std::bind(&Sub::mysub_callback, this, _1));
     pub_ = this->create_publisher<std_msgs::msg::Int32>("err", qos_profile);
-    timer_ = this->create_wall_timer(20ms, std::bind(&Sub::publish_msg, this));
+    timer_ = this->create_wall_timer(50ms, std::bind(&Sub::publish_msg, this));
 }
   
