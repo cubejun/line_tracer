@@ -6,5 +6,5 @@
 
 # 시뮬레이션 영상 
 https://youtu.be/Uk-e7_1u2QE
-# 동작 영상
-https://youtu.be/8fnJx3uJp3E?si=Mk_J8HNRA3u5YTP2
+# 실습 영상
+https://youtu.be/32A8xbPnTBk
