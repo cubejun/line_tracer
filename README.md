@@ -12,3 +12,4 @@
 https://youtu.be/Uk-e7_1u2QE
 # 실습 영상
 https://youtu.be/32A8xbPnTBk
+https://youtu.be/-2-RF0ywq1U
